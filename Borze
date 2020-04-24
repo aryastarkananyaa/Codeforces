@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+string s;
+int x,i;
+cin>>s;
+x=s.length();
+for(i=0;i<x;i++){
+if(s[i]=='.')
+cout<<0;
+if(s[i]=='-'&&s[i+1]=='.'){
+cout<<1; i++;}
+if(s[i]=='-'&&s[i+1]=='-'){
+cout<<2; i++;}}
+return 0;
+}
