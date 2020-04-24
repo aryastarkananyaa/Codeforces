@@ -1,0 +1,45 @@
+#include<bits/stdc++.h>
+using namespace std;
+int countd(int n){
+int a[10]={0};
+int c=0;
+while(n>0){
+int r=n%10;
+a[r]=1;
+n=n/10;
+}
+for(int i=0;i<=9;i++){
+if(a[i])
+c++;
+}
+return c;
+}
+int digits(int n){
+int c=0;
+while(n){
+int r=n%10;
+c++;
+n/=10;
+}
+return c;
+}
+int check(int n){
+while(n<INT_MAX){
+int diff=countd(n+1);
+int total=digits(n+1);
+if(diff==total){
+return n+1; 
+break;}
+else
+n++;
+}
+return -1;
+}
+int main(){
+int n;
+cin>>n;
+cout<<check(n);
+return 0;
+}
+
+
